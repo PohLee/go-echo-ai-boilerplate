@@ -509,9 +509,19 @@ This documentation is designed to work across multiple AI platforms:
 - **Architectural decisions**: High-level design choices must be human-led.
 - **Security policy changes**: Any modification to auth/permissions requires human approval.
 - **Data deletion / destructive operations**: Never automate irreversible data loss.
+- **ORM Model & Schema Changes**: Any changes to ORM models (e.g., Prisma, GORM, Eloquent) or database schema definitions require explicit human approval before implementation. Propose the changes first and wait for confirmation.
+
+---
+
+## 🚫 HARD BLOCK – NO AUTONOMOUS EXECUTION
+
+**Applies To**: All agents, all skills, all tools, all workflows
+
+The following areas are strictly prohibited from AI-generated changes.
+AI agents MUST NOT write, modify, delete, or execute any operation affecting these areas unless explicitly unlocked by a human.
+
 - **Environment Variable Modifications**: Never modify `.env` or configuration files containing secrets/tokens directly. Instruct the user on what variables need to be added or changed.
 - **Direct Database Modifications**: Never make direct changes to database data or records (DML) using database clients or raw SQL. All schema changes must go through migration files and all data changes should be handled through application code or official migration scripts.
-- **ORM Model & Schema Changes**: Any changes to ORM models (e.g., Prisma, GORM, Eloquent) or database schema definitions require explicit human approval before implementation. Propose the changes first and wait for confirmation.
 
 ---
 
