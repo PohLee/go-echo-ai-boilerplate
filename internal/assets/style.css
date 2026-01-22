@@ -1,0 +1,65 @@
+:root {
+    --bg-color: #0d0d12;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent: #6c5ce7;
+    --accent-glow: rgba(108, 92, 231, 0.4);
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --success: #00b894;
+    --error: #d63031;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+/* Typography */
+h1 { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, #fff 0%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent); padding-left: 1rem; }
+p { color: var(--text-secondary); margin-bottom: 1rem; }
+
+/* Components */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px var(--accent-glow); }
+
+/* Checklist */
+.checklist-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+.status-indicator { width: 12px; height: 12px; border-radius: 50%; background: #555; box-shadow: 0 0 5px rgba(0,0,0,0.5); transition: all 0.3s ease; }
+.status-indicator.success { background: var(--success); box-shadow: 0 0 10px var(--success); }
+.status-indicator.error { background: var(--error); box-shadow: 0 0 10px var(--error); }
+.status-indicator.loading { animation: pulse 1.5s infinite; background: var(--accent); }
+
+/* Animations */
+@keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+
+/* Grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 4rem; }
+
+/* Code Block */
+pre { background: #1a1a20; padding: 1.5rem; border-radius: 8px; overflow-x: auto; color: #a9a9b3; font-family: 'Fira Code', monospace; border: 1px solid var(--card-border); }

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Echo AI Boilerplate</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Hero Section -->
+        <header class="animate-fade-in" style="margin: 4rem 0; text-align: center;">
+            <div style="font-size: 5rem; margin-bottom: 1rem;">🚀</div>
+            <h1>Go Echo AI Boilerplate</h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">
+                Production-ready, Microservices-friendly, and designed for the AI Agent era with strict
+                <span style="color: var(--text-primary); font-weight: bold;">Spec-Driven Development</span> protocols.
+            </p>
+        </header>
+
+        <!-- System Health Checklist -->
+        <section class="animate-fade-in" style="animation-delay: 0.2s;">
+            <h2>⚡ System Status</h2>
+            <div class="card">
+                <div class="checklist-item">
+                    <div id="api-status" class="status-indicator loading"></div>
+                    <div>
+                        <strong>API Server</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Direct ping to /health/ping</div>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div id="db-status" class="status-indicator loading"></div>
+                    <div>
+                        <strong>PostgreSQL Connection</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Checking internal connectivity...
+                        </div>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div id="redis-status" class="status-indicator loading"></div>
+                    <div>
+                        <strong>Redis Cache</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">Checking cache latency...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br><br>
+
+
+        <!-- Core Principles Section -->
+        <section class="animate-fade-in" style="animation-delay: 0.5s;">
+            <h2>🧠 Core Principles</h2>
+            <div class="grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="card">
+                    <h3 style="color: var(--text-primary);">01. Plan First, Code Second</h3>
+                    <p>Every implementation starts with an <code>implementation_plan.md</code>. This defines the "What"
+                        and "How" before a single line of Go is written, reducing technical debt from the start.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--text-primary);">02. Self-Healing Middleware</h3>
+                    <p>Our middleware doesn't just block; it provides context. From performance tracing to error
+                        enrichment, the boilerplate is designed to tell you exactly where it hurts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="animate-fade-in" style="animation-delay: 0.4s;">
+            <h2>🛠️ High-Performance Features</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🏛️ Hybrid Architecture</h3>
+                    <p>Combines <strong>Vertical Slice</strong> autonomy with <strong>DDD</strong> patterns. Each
+                        capability is self-contained yet shares common models for high-speed development
+                        and clear boundaries.</p>
+                </div>
+                <div class="card">
+                    <h3>🔐 Security Pro Max</h3>
+                    <p>Enterprise-grade security handlers: <strong>JWT</strong> with refresh logic, <strong>Rate
+                            Limiting</strong>, <strong>Secure Headers</strong> (HSTS, XSS protection), and
+                        <strong>X-API-Key</strong> middleware for internal APIs.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🤖 AI-First DNA</h3>
+                    <p>Engineered for LLMs. Strict <strong>Spec-Driven Development</strong> (SDD) ensures that AI agents
+                        can understand, maintain, and expand the codebase with mathematical precision.</p>
+                </div>
+                <div class="card">
+                    <h3>📚 Dynamic Skill Library</h3>
+                    <p>Over <strong>200+ modular skills</strong> enabled for agents. From database tuning to security
+                        hardening, the boilerplate comes pre-loaded with execution-ready agent logic.</p>
+                </div>
+                <div class="card">
+                    <h3>👥 16+ Specialist Agents</h3>
+                    <p>Domain-specific AI personas including <strong>Backend Specialist</strong>, <strong>Security
+                            Auditor</strong>, and <strong>Test Engineer</strong>. Each agent operates within strict
+                        vertical boundaries to ensure high-fidelity code generation.</p>
+                </div>
+                <div class="card">
+                    <h3>🤖 Orchestration & Automation</h3>
+                    <p>Standardized workflows that bridge probabilistic AI decision-making with deterministic results
+                        across the 3-layer stack that automate complex procedures with deterministic precision.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Quick Start Manual -->
+        <section class="animate-fade-in" style="animation-delay: 0.7s;">
+            <h2>📖 Quick Start</h2>
+            <div class="grid" style="grid-template-columns: 1fr;">
+                <div class="card">
+                    <h3>1. Configuration</h3>
+                    <p>Ensure your <code>.env</code> file is configured correctly.</p>
+                    <pre>DB_HOST=localhost
+DB_PORT=5432
+REDIS_HOST=localhost</pre>
+                </div>
+                <div class="card">
+                    <h3>2. Run Migrations</h3>
+                    <pre>go run cmd/migrate/main.go</pre>
+                </div>
+                <div class="card">
+                    <h3>3. Verify Standards</h3>
+                    <p>Run the validation script before every commit.</p>
+                    <pre>python .tmp/checklist.py</pre>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        async function checkHealth() {
+            try {
+                // Check API ping first for quick feedback
+                const pingRes = await fetch('/health/ping');
+                if (pingRes.ok) {
+                    document.getElementById('api-status').className = 'status-indicator success';
+                }
+
+                // Get detailed status
+                const res = await fetch('/api/status');
+                const data = await res.json();
+
+                if (res.ok) {
+                    // Update Database Status
+                    const dbStatus = document.getElementById('db-status');
+                    if (data.services.database === 'connected') {
+                        dbStatus.className = 'status-indicator success';
+                    } else {
+                        dbStatus.className = 'status-indicator error';
+                    }
+
+                    // Update Redis Status
+                    const redisStatus = document.getElementById('redis-status');
+                    if (data.services.redis === 'connected') {
+                        redisStatus.className = 'status-indicator success';
+                    } else {
+                        redisStatus.className = 'status-indicator error';
+                    }
+                }
+            } catch (e) {
+                document.getElementById('api-status').className = 'status-indicator error';
+                document.getElementById('db-status').className = 'status-indicator error';
+                document.getElementById('redis-status').className = 'status-indicator error';
+            }
+        }
+
+        // Run check on load
+        checkHealth();
+    </script>
+</body>
+
+</html>
