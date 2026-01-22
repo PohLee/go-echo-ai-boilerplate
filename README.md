@@ -9,9 +9,18 @@ This boilerplate is specifically designed with an **AI-first, Architecture-Drive
 - **Framework**: [Labstack Echo v4](https://echo.labstack.com/)
 - **Database**: PostgreSQL with [GORM](https://gorm.io/)
 - **Architecture**: Hybrid Vertical Slice (Domain-Driven Design)
-- **AI-First**: Built-in 3-Layer Agent Architecture
-- **Process-Driven**: Integrated planning and verification workflows
-- **Spec-Driven**: Mandatory data-first and plan-first implementation protocols
+- **AI-First**: Built-in 3-Layer Agent Architecture, compatible with **Antigravity**, **Claude Code**, and **OpenHands**.
+- **Process-Driven**: Integrated planning and verification workflows.
+- **Spec-Driven**: Mandatory data-first and plan-first implementation protocols.
+
+### 🧠 AI Agent Intelligence
+
+This repository is optimized for AI-assisted development. All agents follow the core protocols defined in the documentation.
+
+- **System Architecture**: [ARCHITECTURE.md](.agent/ARCHITECTURE.md)
+- **Agent Protocols**: [AGENTS.md](.agent/AGENTS.md)
+- **Plan Structure**: [PLAN-STRUCTURE.md](.agent/PLAN-STRUCTURE.md)
+- **Workflows**: `.agent/workflows/` (use `/create`, `/enhance`, `/plan`)
 
 ## 📂 Project Structure
 
@@ -63,14 +72,6 @@ This boilerplate is specifically designed with an **AI-first, Architecture-Drive
    go run cmd/api/main.go
    ```
 
-## 🧠 AI Agent Intelligence
-
-This repository is optimized for AI-assisted development. All agents follow the core protocols defined in the documentation.
-
-- **System Architecture**: [ARCHITECTURE.md](.agent/ARCHITECTURE.md)
-- **Agent Protocols**: [AGENTS.md](.agent/AGENTS.md)
-- **Plan Structure**: [PLAN-STRUCTURE.md](.agent/PLAN-STRUCTURE.md)
-- **Workflows**: `.agent/workflows/` (use `/create`, `/enhance`, `/plan`)
 
 ## ✅ Definition of Done
 
